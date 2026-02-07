@@ -56,7 +56,7 @@ public class RobotContainer
     // autoChooser.addOption
     autoChooser.addOption("Move Back and Launch From Front of Hub", new ExampleAuto(driveSubsystem, fuelSubsystem));
     autoChooser.addOption("Launch from side of Hub", new SideAuto(fuelSubsystem, operatorController));
-    autoChooser.addOption("Launch and Go to Outpost", new OutpostAuto(driveSubsystem, fuelSubsystem));
+    autoChooser.setDefaultOption("Launch and Go to Outpost", new OutpostAuto(driveSubsystem, fuelSubsystem));
 
     SmartDashboard.putData("Auto Mode", autoChooser);
 

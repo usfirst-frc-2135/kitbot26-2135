@@ -19,7 +19,7 @@ public class ExampleAuto extends SequentialCommandGroup
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
     addCommands(
-        // Drive backwards for 1 second. The driveArcadeAuto command factory
+        // Drive backwards for 1.5 second. The driveArcadeAuto command factory
         // intentionally creates a command which does not end which allows us to control
         // the timing using the withTimeout decorator
         new AutoDrive(driveSubsystem, 0.5, 0.0).withTimeout(1.5),

@@ -31,7 +31,7 @@ public class SideAuto extends Command
     @Override
     public void execute( )
     {
-        new LaunchSequence(fuelSubsystem).withTimeout(10);//changed from launch to launch sequence so that there could be spinup time
+        new LaunchSequence(fuelSubsystem).withTimeout(20);//changed from launch to launch sequence so that there could be spinup time
     }
 
     // Called once the command ends or is interrupted.
