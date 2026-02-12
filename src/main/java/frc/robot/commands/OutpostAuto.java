@@ -9,14 +9,8 @@ public class OutpostAuto extends SequentialCommandGroup
     public OutpostAuto(CANDriveSubsystem drivesystem, CANFuelSubsystem fuelsystem)
     {
         addCommands(new AutoDrive(drivesystem, 0.5, 0).withTimeout(1.5), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.5),
-                new AutoDrive(drivesystem, -0.5, 0).withTimeout(7.1));
-        // new AutoDrive(drivesystem, 0.5, 0).withTimeout(7.1));
-        // new AutoDrive(drivesystem, 0, -0.5).withTimeout(3.1),
-        // new AutoDrive(drivesystem, -0.5, 0).withTimeout(1));
-        // addCommands(new AutoDrive(drivesystem, 0, -0.5).withTimeout(3.1));
-        //new AutoDrive(drivesystem,0,-0.5).withTimeout(4.9);
-        //overall time of auto is 21.7 seconds (9.5+3.1+7.1+3.1+1+3.1+4.9) (overtime, will probably speed up autodrive to compensate)
+                new AutoDrive(drivesystem, -0.75, 0).withTimeout(2.16), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.54),
+                new AutoDrive(drivesystem, -0.75, 0).withTimeout(1.24));
+        //overall time of auto is 10 seconds 
     }
 }
-//new AutoDrive(drivesystem, 1, 0).withTimeout(3.55);
-//new AutoDrive(drivesystem, 0, -0.5).withTimeout(1.725);
