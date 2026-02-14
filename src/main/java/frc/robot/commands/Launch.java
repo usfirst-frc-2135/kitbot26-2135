@@ -9,13 +9,19 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.CANFuelSubsystem;
 import static frc.robot.Constants.FuelConstants.*;
 
-/* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
-public class Launch extends Command {
+/*
+ * You should consider using the more terse Command factories API instead
+ * https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#
+ * defining-commands
+ */
+public class Launch extends Command
+{
   /** Creates a new Intake. */
 
   CANFuelSubsystem fuelSubsystem;
 
-  public Launch(CANFuelSubsystem fuelSystem) {
+  public Launch(CANFuelSubsystem fuelSystem)
+  {
     addRequirements(fuelSystem);
     this.fuelSubsystem = fuelSystem;
   }
@@ -23,27 +29,31 @@ public class Launch extends Command {
   // Called when the command is initially scheduled. Set the rollers to the
   // appropriate values for intaking
   @Override
-  public void initialize() {
+  public void initialize( )
+  {
     fuelSubsystem
-        .setIntakeLauncherRoller(
-            SmartDashboard.getNumber("Launching launcher roller value", LAUNCHING_LAUNCHER_VOLTAGE));
+        .setIntakeLauncherRoller(SmartDashboard.getNumber("Launching launcher roller value", LAUNCHING_LAUNCHER_VOLTAGE));
     fuelSubsystem.setFeederRoller(SmartDashboard.getNumber("Launching feeder roller value", LAUNCHING_FEEDER_VOLTAGE));
   }
 
   // Called every time the scheduler runs while the command is scheduled. This
   // command doesn't require updating any values while running
   @Override
-  public void execute() {
-  }
+  public void execute( )
+  {}
 
   // Called once the command ends or is interrupted. Stop the rollers
   @Override
-  public void end(boolean interrupted) {
+  public void end(boolean interrupted)
+  {
+    fuelSubsystem.setFeederRoller(0);
+    fuelSubsystem.setIntakeLauncherRoller(0);
   }
 
   // Returns true when the command should end.
   @Override
-  public boolean isFinished() {
+  public boolean isFinished( )
+  {
     return false;
   }
 }

@@ -54,9 +54,9 @@ public class RobotContainer
     // Set the options to show up in the Dashboard for selecting auto modes. If you
     // add additional auto modes you can add additional lines here with
     // autoChooser.addOption
-    autoChooser.setDefaultOption("Move Back and Launch From Front of Hub", new ExampleAuto(driveSubsystem, fuelSubsystem));
+    autoChooser.addOption("Move Back and Launch From Front of Hub", new ExampleAuto(driveSubsystem, fuelSubsystem));
     autoChooser.addOption("Launch from side of Hub", new SideAuto(fuelSubsystem, operatorController));
-    autoChooser.addOption("Launch and Go to Outpost", new OutpostAuto(driveSubsystem, fuelSubsystem));
+    autoChooser.setDefaultOption("Launch and Go to Outpost", new OutpostAuto(driveSubsystem, fuelSubsystem));
 
     SmartDashboard.putData("Auto Mode", autoChooser);
 
