@@ -23,8 +23,8 @@ public class ExampleAuto extends SequentialCommandGroup
         // intentionally creates a command which does not end which allows us to control
         // the timing using the withTimeout decorator
         new AutoDrive(driveSubsystem, 0.5, 0.0).withTimeout(1.5),
-        // Spin up the launcher for 1 second and then launch balls for 7 seconds, for a
-        // total of 8 seconds
-        new LaunchSequence(ballSubsystem).withTimeout(8));//changed from launch to launch sequence so that there could be spinup time
+        // Spin up the launcher for 1 second and then launch balls for 6.5 seconds, for a
+        // total of 7.5 seconds
+        new LaunchSequence(ballSubsystem).withTimeout(7.5));//changed from launch to launch sequence so that there could be spinup time
   }
 }
