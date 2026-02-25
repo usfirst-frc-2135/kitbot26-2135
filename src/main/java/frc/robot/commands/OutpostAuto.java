@@ -8,20 +8,11 @@ public class OutpostAuto extends SequentialCommandGroup
 {
     public OutpostAuto(CANDriveSubsystem drivesystem, CANFuelSubsystem fuelsystem)
     {
-        addCommands(new AutoDrive(drivesystem, 0.5, 0).withTimeout(1.5), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.28),
-                new AutoDrive(drivesystem, 0.6, 0).withTimeout(0.5), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.28),
-                new AutoDrive(drivesystem, -0.6, 0).withTimeout(3.63), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.28),
-                new AutoDrive(drivesystem, -0.6, 0).withTimeout(0.25), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.28),
-                new AutoDrive(drivesystem, -0.6, 0).withTimeout(1.7));
-        // addCommands(new AutoDrive(drivesystem, 0.5, 0).withTimeout(1.5), new AutoDrive(drivesystem, 0, -0.75).withTimeout(1.25),
-        //         new AutoDrive(drivesystem, -0.6, 0).withTimeout(3.4), new AutoDrive(drivesystem, 0, -0.6).withTimeout(1.11));
-        // new AutoDrive(drivesystem, -0.75, 0).withTimeout(2.17), new AutoDrive(drivesystem, 0, -0.75).withTimeout(0.53),
-        // new AutoDrive(drivesystem, -0.75, 0).withTimeout(1.4), new AutoDrive(drivesystem, 0, 0).withTimeout(1.5),
-        // new AutoDrive(drivesystem, 0.75, 0).withTimeout(0.25));
-        // new ExampleAuto(drivesystem, fuelsystem)        //new AutoDrive(drivesystem,0,0.75).withTimeout(0.53)
-        //new AutoDrive(drivesystem,0.75,0).withTimeout(1.1);
-        //new AutoDrive(drivesystem,0,0.75).withTimeout(0.75);
-        //new LaunchSequence(fuelsystem).withTimeout(5);
+        addCommands(new AutoDrive(drivesystem, 0.5, 0).withTimeout(1.5), new AutoDrive(drivesystem, 0, -0.6).withTimeout(0.52),
+                new AutoDrive(drivesystem, 0.6, 0).withTimeout(0.5), new AutoDrive(drivesystem, 0, -0.6).withTimeout(0.52),
+                new AutoDrive(drivesystem, -0.6, 0).withTimeout(3.7), new AutoDrive(drivesystem, 0, -0.6).withTimeout(0.52),
+                new AutoDrive(drivesystem, -0.6, 0).withTimeout(0.25), new AutoDrive(drivesystem, 0, -0.6).withTimeout(0.52),
+                new AutoDrive(drivesystem, -0.6, 0).withTimeout(1.9), new AutoDrive(drivesystem, 0.6, 0).withTimeout(1.9));
     }
 }
 
