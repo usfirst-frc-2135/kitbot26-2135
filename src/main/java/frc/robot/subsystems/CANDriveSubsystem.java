@@ -52,6 +52,7 @@ public class CANDriveSubsystem extends SubsystemBase
     config.voltageCompSaturation = 12.0;//max voltage
     config.continuousCurrentLimit = DRIVE_MOTOR_CURRENT_LIMIT;
     leftFront.configAllSettings(config);
+
     rightFront.configAllSettings(config);
 
     leftBack.follow(leftFront);
@@ -65,6 +66,10 @@ public class CANDriveSubsystem extends SubsystemBase
     rightBack.setNeutralMode(NeutralMode.Coast);
     rightFront.setInverted(true);
     rightBack.setInverted(true);
+    leftFront.configVoltageCompSaturation(12);
+    leftFront.enableVoltageCompensation(true);
+    rightFront.configVoltageCompSaturation(12);
+    rightFront.enableVoltageCompensation(true);
 
   }
 
