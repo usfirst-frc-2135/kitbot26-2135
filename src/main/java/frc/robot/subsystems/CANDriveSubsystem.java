@@ -49,7 +49,7 @@ public class CANDriveSubsystem extends SubsystemBase
     // this.rightFront.setExpiration(250.0);
 
     TalonSRXConfiguration config = new TalonSRXConfiguration( );
-    config.voltageCompSaturation = 12.0;//max voltage
+    config.voltageCompSaturation = 11.5;//max voltage
     config.continuousCurrentLimit = DRIVE_MOTOR_CURRENT_LIMIT;
     leftFront.configAllSettings(config);
 
@@ -66,9 +66,9 @@ public class CANDriveSubsystem extends SubsystemBase
     rightBack.setNeutralMode(NeutralMode.Coast);
     rightFront.setInverted(true);
     rightBack.setInverted(true);
-    leftFront.configVoltageCompSaturation(12);
+    leftFront.configVoltageCompSaturation(11.5);
     leftFront.enableVoltageCompensation(true);
-    rightFront.configVoltageCompSaturation(12);
+    rightFront.configVoltageCompSaturation(11.5);
     rightFront.enableVoltageCompensation(true);
 
   }
