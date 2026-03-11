@@ -10,8 +10,9 @@ public class OutpostAuto extends SequentialCommandGroup
     {
         addCommands(new AutoDrive(drivesystem, 0.5, 0).withTimeout(1.5), new AutoDrive(drivesystem, 0, 0).withTimeout(0.15),
                 new AutoDrive(drivesystem, 0, -0.6).withTimeout(1), new AutoDrive(drivesystem, -0.6, 0).withTimeout(3.94),
-                new AutoDrive(drivesystem, 0, 0).withTimeout(0.15), new AutoDrive(drivesystem, 0, -0.6).withTimeout(1.01),
-                new AutoDrive(drivesystem, -0.6, 0).withTimeout(2.3));
+                new AutoDrive(drivesystem, 0, 0).withTimeout(0.15), new AutoDrive(drivesystem, 0, -0.6).withTimeout(1.03),
+                new AutoDrive(drivesystem, -0.6, 0).withTimeout(3.15), new AutoDrive(drivesystem, 0, 0).withTimeout(4),
+                new AutoDrive(drivesystem, 0.6, 0).withTimeout(3.15));
     }
 }
 
